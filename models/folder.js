@@ -40,7 +40,7 @@ class Folder extends FileSystemItem {
      */
     getItem(name) {
         for (const fsItem of this.items) {
-            if (fsItem.name === name) {
+            if (fsItem.name.toLowerCase() === name.toLowerCase()) {
                 return fsItem;
             }
         }
