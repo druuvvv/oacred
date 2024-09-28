@@ -11,6 +11,8 @@ class FileSystemItem {
     constructor(name, isFolder) {
         this.name = name;
         this.isFolder = isFolder;
+        
+        this.parent = null;
     }
 }
 

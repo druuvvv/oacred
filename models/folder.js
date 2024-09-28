@@ -22,6 +22,7 @@ class Folder extends FileSystemItem {
             return;
         }
         this.items.push(fsItem);
+        fsItem.parent = this;
     }
 
     /**
@@ -38,7 +39,7 @@ class Folder extends FileSystemItem {
      * @param {string} name 
      */
     getItem(name) {
-        for (fsItem of this.items) {
+        for (const fsItem of this.items) {
             if (fsItem.name === name) {
                 return fsItem;
             }
