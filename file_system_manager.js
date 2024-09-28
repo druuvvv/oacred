@@ -16,7 +16,7 @@ class FileSystemManager {
         // The Keys of this object will be the names of the files and folders
         // The values will be the actual File or Folder objects
         this.index = {};
-        this.index[rootName.toLowerCase()] = this.root;
+        this.index[rootName] = this.root;
     }
 
 
@@ -28,7 +28,7 @@ class FileSystemManager {
      * @param {boolean} isFolder true if adding a folder, false if adding a file
      */
     addFileOrFolder = (parentFolderName, name, isFolder) => {
-        let parentFolder = this.index[parentFolderName.toLowerCase()];
+        let parentFolder = this.index[parentFolderName];
         if (!parentFolder) {
             // throw new Error(`Parent folder with name ${parentFolderName} does not exist`);
             return null;
@@ -49,11 +49,11 @@ class FileSystemManager {
             parentFolder.addItem(folder);
 
             // index is case insensitive, like our filesystem.
-            this.index[name.toLowerCase()] = folder;
+            this.index[name] = folder;
         } else {
             let file = new File(name);
             parentFolder.addItem(file);
-            this.index[name.toLowerCase()] = file;
+            this.index[name] = file;
         }
     }
 
@@ -65,13 +65,13 @@ class FileSystemManager {
      * @param {string} destinationFolderName the name of the destination folder
      */
     moveFileOrFolder = (sourceName, destinationFolderName) => {
-        let source = this.index[sourceName.toLowerCase()];
+        let source = this.index[sourceName];
         if (!source) {
-            return;
+            return null;
             // throw new Error(`File or folder with name ${sourceName} does not exist`);
         }
 
-        let destinationFolder = this.index[destinationFolderName.toLowerCase()];
+        let destinationFolder = this.index[destinationFolderName];
         if (!destinationFolder) {
             return null;
             // throw new Error(`Destination folder with name ${destinationFolderName} does not exist`);
@@ -137,13 +137,13 @@ class FileSystemManager {
      * @returns {string} the name of the file if found, null otherwise
      */
     searchFileExactMatch = (folderName, fileName) => {
-        let folder = this.index[folderName.toLowerCase()];
+        let folder = this.index[folderName];
         if (!folder) {
             return null;
             // throw new Error(`Folder with name ${folderName} does not exist`);
         }
 
-        let item = folder.getItem(fileName);
+        let item = folder.getItemCaseInsensitive(fileName);
         if (!item) {
             return null;
         }
@@ -161,7 +161,7 @@ class FileSystemManager {
      * @returns {[]string} a list of file names that match the pattern
      */
     searchFileLikeMatch = (folderName, pattern) => {
-        let folder = this.index[folderName.toLowerCase()];
+        let folder = this.index[folderName];
         if (!folder) {
             return null;
             // throw new Error(`Folder with name ${folderName} does not exist`);
