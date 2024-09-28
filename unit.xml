@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0080" tests="18" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-09-28T13:13:46" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="File system manager tests" timestamp="2024-09-28T13:13:46" tests="18" file="/home/anunay/projects/6a50660f-5270-463c-8e30-4f229140c02e/test/test.js" time="0.0080" failures="0">
+    <testcase name="File system manager tests Adding a file to existing folder" time="0.0020" classname="Adding a file to existing folder">
+    </testcase>
+    <testcase name="File system manager tests Adding a folder to existing folder" time="0.0000" classname="Adding a folder to existing folder">
+    </testcase>
+    <testcase name="File system manager tests Adding a file to a non existing folder" time="0.0000" classname="Adding a file to a non existing folder">
+    </testcase>
+    <testcase name="File system manager tests Moving a file to a non existent folder" time="0.0010" classname="Moving a file to a non existent folder">
+    </testcase>
+    <testcase name="File system manager tests Moving a non existent file" time="0.0000" classname="Moving a non existent file">
+    </testcase>
+    <testcase name="File system manager tests Listing contents of a folder" time="0.0000" classname="Listing contents of a folder">
+    </testcase>
+    <testcase name="File system manager tests Moving a file" time="0.0000" classname="Moving a file">
+    </testcase>
+    <testcase name="File system manager tests Moving a file" time="0.0000" classname="Moving a file">
+    </testcase>
+    <testcase name="File system manager tests Listing entire directory structure" time="0.0000" classname="Listing entire directory structure">
+    </testcase>
+    <testcase name="File system manager tests Search for a file with exact match" time="0.0000" classname="Search for a file with exact match">
+    </testcase>
+    <testcase name="File system manager tests Search for a file with pattern match" time="0.0000" classname="Search for a file with pattern match">
+    </testcase>
+    <testcase name="File system manager tests Listing contents of a non existent folder" time="0.0000" classname="Listing contents of a non existent folder">
+    </testcase>
+    <testcase name="File system manager tests Search for a file with a non existent pattern" time="0.0010" classname="Search for a file with a non existent pattern">
+    </testcase>
+    <testcase name="File system manager tests Search for a file in a non existent folder" time="0.0000" classname="Search for a file in a non existent folder">
+    </testcase>
+    <testcase name="File system manager tests Handling of duplicate file or folder names within same parent folder" time="0.0000" classname="Handling of duplicate file or folder names within same parent folder">
+    </testcase>
+    <testcase name="File system manager tests Handling of special characters in file and folder names" time="0.0000" classname="Handling of special characters in file and folder names">
+    </testcase>
+    <testcase name="File system manager tests Listing with a large number of files and folders" time="0.0040" classname="Listing with a large number of files and folders">
+    </testcase>
+    <testcase name="File system manager tests Case insensitivity in file and folder names during search" time="0.0000" classname="Case insensitivity in file and folder names during search">
+    </testcase>
+  </testsuite>
+</testsuites>
